@@ -1,4 +1,4 @@
-package com.example.domain.models.user;
+package com.inclusivo.application.users.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,7 +12,10 @@ import lombok.NoArgsConstructor;
 public class UserDTO {
 
     private Long id;
+
     private String name;
+
     private String email;
+
     private String password;
 }
