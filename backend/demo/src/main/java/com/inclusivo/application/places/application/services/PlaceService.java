@@ -16,4 +16,6 @@ public interface PlaceService {
     void deleteById(Long id);
 
     List<PlaceModel> findByCity(String country);
+
+    Optional<PlaceModel> findByNameContainingIgnoreCase(String name);
 }
