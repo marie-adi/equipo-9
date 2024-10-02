@@ -22,6 +22,7 @@ import lombok.ToString;
 @Entity
 @Table(name="places")
 @ToString
+
 public class PlaceModel {
 
     @Id
