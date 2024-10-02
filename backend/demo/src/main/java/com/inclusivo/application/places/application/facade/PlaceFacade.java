@@ -1,20 +1,19 @@
 package com.inclusivo.application.places.application.facade;
 
-import com.inclusivo.application.places.domain.PlaceModel;
-
+import com.inclusivo.application.places.domain.PlaceDTO;
 import java.util.List;
 import java.util.Optional;
 
 public interface PlaceFacade {
-    List<PlaceModel> findAll();
+    List<PlaceDTO> findAll();
 
-    Optional<PlaceModel> findById(Long id);
+    PlaceDTO findById(Long id);
 
-    PlaceModel save(PlaceModel place);
+    PlaceDTO save(PlaceDTO place);
 
     void deleteById(Long id);
 
-    List<PlaceModel> findByCity(String country);
+    List<PlaceDTO> findByCity(String country);
 
-    Optional<PlaceModel> findByNameContainingIgnoreCase(String name);
+    PlaceDTO findByNameContainingIgnoreCase(String name);
 }
