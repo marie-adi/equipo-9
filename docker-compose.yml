@@ -1,36 +1,46 @@
 version: '3'
 services:
   db:
-    image: mysql:5.7
+    image: mysql:8.0
     ports:
       - "3306:3306"
     environment:
-      MYSQL_ROOT_PASSWORD: P@ssw0rd
-      MYSQL_USER: inclusivo_user
-      MYSQL_PASSWORD: inclusivo_user_password
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
       MYSQL_DATABASE: inclusivo
+    volumes:
+      - mysql_data:/var/lib/mysql 
 
+  phpmyadmin:
+    image: phpmyadmin
+    ports:
+      - "8081:80"  
+    environment:
+      - PMA_HOST=db  
+    depends_on:
+      - db
+  
   spring-boot-app:
     build:
       context: ./backend
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile 
     ports:
       - "8080:8080"
     depends_on:
       - db
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/inclusivo
-      SPRING_DATASOURCE_USERNAME: inclusivo_user
-      SPRING_DATASOURCE_PASSWORD: inclusivo_user_password
+      SPRING_DATASOURCE_USERNAME: user  
+      SPRING_DATASOURCE_PASSWORD: password  
 
   react-app:
     build:
       context: ./frontend
-      dockerfile: /Dockerfile
+      dockerfile: Dockerfile  
     ports:
       - "3000:80"
 
-  adminer:
-    image: adminer
-    ports:
-      - "8081:8080"  # Accede a Adminer en http://localhost:8081
+volumes:
+  mysql_data: 
+
