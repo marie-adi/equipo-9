@@ -1,13 +1,18 @@
 package com.inclusivo.application.places.application.services;
 
 import com.inclusivo.application.places.domain.PlaceModel;
+import com.inclusivo.application.places.exceptions.PlaceDeleteException;
+import com.inclusivo.application.places.exceptions.PlaceNotFoundException;
 import com.inclusivo.application.places.infraestructure.repository.PlaceRepository;
 import jakarta.annotation.Resource;
+import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
 import java.util.List;
 import java.util.Optional;
-public class ServiceImpl implements PlaceService{
+
+@Service
+public class PlaceServiceImpl implements PlaceService{
 
     @Resource
     private PlaceRepository placeRepository;
@@ -36,20 +41,25 @@ public class ServiceImpl implements PlaceService{
     public void deleteById(Long id) {
 
         Assert.notNull(id, "Id value is null.");
-        placeRepository.deleteById(id);
+        placeRepository.findById(id)
+                .map(placeModel -> {
+                    placeRepository.delete(placeModel);
+                    return placeModel;
+                })
+                .orElseThrow(() -> new PlaceDeleteException(id));
     }
 
     @Override
-    public List<PlaceModel> findByCity(String country) {
+    public List<PlaceModel> findByCity(String city) {
 
-        Assert.notNull(country, "Country value is null.");
-        return List.of();
+        Assert.notNull(city, "City value is null.");
+        return placeRepository.findByCity(city);
     }
 
     @Override
     public Optional<PlaceModel> findByNameContainingIgnoreCase(String name) {
 
         Assert.notNull(name, "Name value is null.");
-        return Optional.empty();
+        return placeRepository.findByNameContainingIgnoreCase(name);
     }
 }

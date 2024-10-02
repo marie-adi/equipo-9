@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service
 public interface PlaceService {
 
     List<PlaceModel> findAll();
@@ -17,7 +16,7 @@ public interface PlaceService {
 
     void deleteById(Long id);
 
-    List<PlaceModel> findByCity(String country);
+    List<PlaceModel> findByCity(String city);
 
     Optional<PlaceModel> findByNameContainingIgnoreCase(String name);
 }
