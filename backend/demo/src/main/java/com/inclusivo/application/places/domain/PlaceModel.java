@@ -11,6 +11,7 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 @Setter
 @Getter
@@ -20,7 +21,7 @@ import lombok.Setter;
 @EqualsAndHashCode
 @Entity
 @Table(name="places")
-
+@ToString
 public class PlaceModel {
 
     @Id
