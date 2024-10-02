@@ -1,4 +1,4 @@
-package com.example.domain.models.places;
+package com.inclusivo.application.places.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -26,10 +26,16 @@ public class PlaceModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String name;
+
     private String city;
+
     private String address;
+
     private String problem;
+
     private Integer ranking;
+
     private String imageUrl;
 }
