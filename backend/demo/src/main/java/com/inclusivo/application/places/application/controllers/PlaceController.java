@@ -1,11 +1,8 @@
 package com.inclusivo.application.places.application.controllers;
 
 import com.inclusivo.application.places.application.facade.PlaceFacade;
-import com.inclusivo.application.places.application.services.PlaceService;
 import com.inclusivo.application.places.domain.PlaceDTO;
-import com.inclusivo.application.places.domain.PlaceModel;
 import com.inclusivo.application.places.exceptions.PlaceNotFoundException;
-import com.inclusivo.application.places.infraestructure.repository.PlaceRepository;
 import jakarta.annotation.Resource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
