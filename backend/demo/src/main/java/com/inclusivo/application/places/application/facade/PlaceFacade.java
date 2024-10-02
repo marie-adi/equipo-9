@@ -1,14 +1,11 @@
-package com.inclusivo.application.places.application.services;
+package com.inclusivo.application.places.application.facade;
 
 import com.inclusivo.application.places.domain.PlaceModel;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-@Service
-public interface PlaceService {
-
+public interface PlaceFacade {
     List<PlaceModel> findAll();
 
     Optional<PlaceModel> findById(Long id);
