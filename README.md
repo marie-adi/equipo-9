@@ -35,3 +35,14 @@ Currently, two official plugins are available:
 
 ![Estructura AWS](https://github.com/user-attachments/assets/247ee817-ebf3-4af6-8b18-d57ce09fa194)
 
+---
+
+## Equipo
+
+- ** Carolina Tomás
+- ** Sandra Esteban
+- ** Mariela Adimari
+- ** Iryna Bilokon
+- ** Scarlet Gonzalez
+- ** Silvia Piñel
+- ** Sara Alcaraz
