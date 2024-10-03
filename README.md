@@ -39,10 +39,10 @@ Currently, two official plugins are available:
 
 ## Equipo
 
-- ** Carolina Tomás
-- ** Sandra Esteban
-- ** Mariela Adimari
-- ** Iryna Bilokon
-- ** Scarlet Gonzalez
-- ** Silvia Piñel
-- ** Sara Alcaraz
+- **Carolina Tomás**
+- **Sandra Esteban**
+- **Mariela Adimari**
+- **Iryna Bilokon**
+- **Scarlet Gonzalez**
+- **Silvia Piñel**
+- **Sara Alcaraz**
