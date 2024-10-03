@@ -1,5 +1,6 @@
 
-![image](https://github.com/user-attachments/assets/2869d5d1-2149-4890-97a9-dc0e92c41d87)
+![+inclusion](https://github.com/user-attachments/assets/afce4280-640d-4e24-84c4-c56ed295c00f)
+
 
 ## Descripción del Proyecto
 
