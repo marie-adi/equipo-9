@@ -15,4 +15,4 @@ Los usuarios pueden subir imágenes y clasificar espacios como accesibles o no a
 - **Backend:** Java, Python
 - **Base de Datos:** MySQL
 - **Librerías:** NumPy, Pandas, TensorFlow
-- **Modelo:** Sequential
+- **Modelo:** Sequential, YOLO8n
