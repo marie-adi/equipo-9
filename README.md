@@ -1,5 +1,4 @@
-![image]
-![image](https://github.com/user-attachments/assets/8ae5866e-f40f-4967-a0a3-8d5d594a3c03)
+
 ![image](https://github.com/user-attachments/assets/2869d5d1-2149-4890-97a9-dc0e92c41d87)
 
 ## Descripción del Proyecto
