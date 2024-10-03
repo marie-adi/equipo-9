@@ -17,3 +17,10 @@ Los usuarios pueden subir imágenes y clasificar espacios como accesibles o no a
 - **Base de Datos:** MySQL
 - **Librerías:** NumPy, Pandas, TensorFlow
 - **Modelo:** Sequential, YOLO8n
+
+---
+
+## Estructura AWS teórica del proyecto
+
+![Estructura AWS](https://github.com/user-attachments/assets/247ee817-ebf3-4af6-8b18-d57ce09fa194)
+
