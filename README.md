@@ -19,6 +19,7 @@ Los usuarios pueden subir imágenes y clasificar espacios como accesibles o no a
 - **Modelo:** Sequential, YOLO8n
 
 ---
+#Frontend
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
