@@ -197,10 +197,6 @@ La tabla `places` está diseñada para almacenar información sobre diferentes l
 ### Pruebas Unitarios realizadas con Mockito
 La clase `ServiceImplTest` contiene pruebas unitarias para el servicio `PlaceServiceImpl`, las cuales están diseñadas para verificar el comportamiento de métodos individuales, como `findAll()`, `findById()`, `save()`, y `deleteById()`. Las pruebas unitarias se centran en validar la lógica interna de cada método de forma aislada, asegurando que funcionen correctamente sin depender de otros componentes del sistema. En este contexto, se utiliza **Mockito** para crear mocks del `PlaceRepository`, lo que permite simular su comportamiento y probar la lógica del servicio sin acceder a la base de datos real. Esto facilita la detección temprana de errores y asegura la robustez del servicio, garantizando que maneje adecuadamente excepciones como `PlaceDeleteException` e `IllegalArgumentException`, y que realice correctamente operaciones como la creación, búsqueda y eliminación de lugares.
 
-## Estructura AWS teórica del proyecto
-
-![Estructura AWS](https://github.com/user-attachments/assets/247ee817-ebf3-4af6-8b18-d57ce09fa194)
-
 ---
 
 ## Equipo
