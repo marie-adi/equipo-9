@@ -3,7 +3,9 @@ package com.inclusivo.application.places.application.controllers;
 import com.inclusivo.application.places.application.facade.PlaceFacade;
 import com.inclusivo.application.places.domain.PlaceDTO;
 import com.inclusivo.application.places.exceptions.PlaceNotFoundException;
+import com.inclusivo.application.places.infraestructure.repository.PlaceRepository;
 import jakarta.annotation.Resource;
+import jakarta.persistence.EntityNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -23,6 +25,9 @@ public class PlaceController {
 
     @Resource
     private PlaceFacade placeFacade;
+
+    @Resource
+    private PlaceRepository placeRepository;
 
     @GetMapping
     public ResponseEntity<List<PlaceDTO>> findAll() {
@@ -45,7 +50,12 @@ public class PlaceController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Integer> delete(@PathVariable int id) {
-        return ResponseEntity.status(HttpStatus.OK).body(id);
+        try {
+            placeRepository.deleteById((long) id);
+            return ResponseEntity.status(HttpStatus.OK).body(id);
+        } catch (EntityNotFoundException e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
     }
 
     @GetMapping("/city/{city}")

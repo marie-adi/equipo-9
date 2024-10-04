@@ -1,5 +1,6 @@
 package com.inclusivo.application.places.domain;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -39,5 +40,6 @@ public class PlaceModel {
 
     private Integer ranking;
 
+    @Column(name = "image_url")
     private String imageUrl;
 }

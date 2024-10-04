@@ -41,6 +41,7 @@ public class PlaceFacadeImpl implements PlaceFacade {
 
     @Override
     public void deleteById(Long id) {
+
         placeService.deleteById(id);
     }
 
